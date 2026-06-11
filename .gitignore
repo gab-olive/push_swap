@@ -1,0 +1,8 @@
+push_swap
+*.o
+.cache
+.devcontainer
+.vscode
+compile_commands.json
+test
+*.a
