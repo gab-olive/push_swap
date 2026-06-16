@@ -6,7 +6,7 @@
 /*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 21:30:31 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/06 21:33:58 by zleullie         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:45:14 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ double	compute_disorder(int *numbers, size_t size)
 {
 	double	mistakes;
 	double	total_pairs;
-	long	i;
-	long	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	mistakes = 0;

@@ -6,7 +6,7 @@
 /*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 17:52:12 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/06 19:21:48 by zleullie         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:45:39 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int	get_pos(t_stack *b, int target)
 
 void	push_all_a(t_stack *a, t_stack *b)
 {
-	int	i;
 	int	position;
 	int	target;
 

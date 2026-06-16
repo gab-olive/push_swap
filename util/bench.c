@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bench.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielo <gabrielo@42spstudent.org.br>     +#+  +:+       +#+        */
+/*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 21:26:13 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/16 12:21:30 by gabrielo         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:44:46 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,10 @@ static char	*get_strategy_str(struct s_args *args)
 
 void	bench(struct s_args *args)
 {
-	double	d;
 	int		disorder;
 	int		fractions;
-	char	*buf;
 
-	d = compute_disorder(args->numbers, args->size) * 10000;
-	disorder = d;
+	disorder = compute_disorder(args->numbers, args->size) * 10000;
 	fractions = disorder % 100;
 	disorder = disorder / 100;
 	ft_printf_fd(STDERR_FILENO, "[bench] disorder: %d.%d%%\n", disorder,

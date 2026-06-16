@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielo <gabrielo@42spstudent.org.br>     +#+  +:+       +#+        */
+/*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 14:29:51 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/11 11:05:34 by gabrielo         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:43:39 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ static t_sorting_func	pick_algorithm(struct s_args *args)
 		if (args->flags & COMPLEX)
 			return (radix_sort);
 	}
+	return (chunk_sort);
 }
 
 int	main(int argc, char **argv)
