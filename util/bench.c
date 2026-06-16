@@ -6,7 +6,7 @@
 /*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 21:26:13 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/16 17:44:46 by zleullie         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:53:47 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ void	bench(struct s_args *args)
 	disorder = compute_disorder(args->numbers, args->size) * 10000;
 	fractions = disorder % 100;
 	disorder = disorder / 100;
-	ft_printf_fd(STDERR_FILENO, "[bench] disorder: %d.%d%%\n", disorder,
+	ft_printf_fd(STDERR_FILENO, "[bench]: disorder: %d.%d%%\n", disorder,
 		fractions);
-	ft_printf_fd(STDERR_FILENO, "[bench] strategy: %s\n",
+	ft_printf_fd(STDERR_FILENO, "[bench]: strategy: %s\n",
 		get_strategy_str(args));
-	ft_printf_fd(STDERR_FILENO, "[bench] total_ops: %d\n",
+	ft_printf_fd(STDERR_FILENO, "[bench]: total_ops: %d\n",
 		get_total_operations());
 	ft_printf_fd(STDERR_FILENO, "[bench]: ");
 	ft_printf_fd(STDERR_FILENO, "sa: %d ", get_operation_count(SA));
