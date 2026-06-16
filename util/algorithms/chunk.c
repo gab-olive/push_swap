@@ -6,7 +6,7 @@
 /*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 17:52:12 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/16 17:45:39 by zleullie         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:49:15 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,11 @@ void	push_all_a(t_stack *a, t_stack *b)
 			pa(a, b);
 		position = get_pos(b, target);
 		if (position <= b->size / 2)
-		{
 			while (b->head->index != target)
 				rb(b);
-		}
 		else
-		{
 			while (b->head->index != target)
 				rrb(b);
-		}
 		pa(a, b);
 		if (a->size > 1 && a->head->index > a->head->next->index)
 		{

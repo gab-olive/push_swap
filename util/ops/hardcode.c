@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hardcode.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielo <gabrielo@42spstudent.org.br>     +#+  +:+       +#+        */
+/*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 08:57:51 by gabrielo          #+#    #+#             */
-/*   Updated: 2026/06/16 12:19:43 by gabrielo         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:47:47 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,20 @@ void	sort_three(t_stack *a)
 	a_val = a->head->value;
 	b_val = a->head->next->value;
 	c_val = a->head->next->next->value;
-	if ((a_val < b_val) && (b_val < c_val)) // 1-2-3
+	if ((a_val < b_val) && (b_val < c_val))
 		return ;
-	if ((a_val < c_val) && (c_val < b_val)) // 1-3-2
+	if ((a_val < c_val) && (c_val < b_val))
 	{
 		sa(a);
 		ra(a);
 	}
-	else if ((b_val < a_val) && (a_val < c_val)) // 2-1-3
+	else if ((b_val < a_val) && (a_val < c_val))
 		sa(a);
-	else if ((c_val < a_val) && (a_val < b_val)) // 2-3-1
+	else if ((c_val < a_val) && (a_val < b_val))
 		rra(a);
-	else if ((b_val < c_val) && (c_val < a_val)) // 3-1-2
+	else if ((b_val < c_val) && (c_val < a_val))
 		ra(a);
-	else if ((c_val < b_val) && (b_val < a_val)) // 3-2-1
+	else if ((c_val < b_val) && (b_val < a_val))
 	{
 		sa(a);
 		rra(a);
