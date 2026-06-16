@@ -6,7 +6,7 @@
 /*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 14:29:51 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/16 17:43:39 by zleullie         ###   ########.fr       */
+/*   Updated: 2026/06/16 18:15:58 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,12 @@ static t_sorting_func	pick_algorithm(struct s_args *args)
 	return (chunk_sort);
 }
 
+static int	error_out(void)
+{
+	ft_printf("Error\n");
+	return (1);
+}
+
 int	main(int argc, char **argv)
 {
 	struct s_args	args;
@@ -50,20 +56,16 @@ int	main(int argc, char **argv)
 	t_stack			stack_b;
 	t_sorting_func	func;
 
+	if (argc == 1)
+		return (0);
 	stack_init(&stack_a);
 	stack_init(&stack_b);
 	if (!initialize_args(&args, argc, argv))
-	{
-		ft_printf("Error\n");
-		return (1);
-	}
+		error_out();
 	stack_from_list(&args, &stack_a);
 	func = pick_algorithm(&args);
 	if (!func)
-	{
-		ft_printf("Error\n");
-		return (1);
-	}
+		error_out();
 	func(&stack_a, &stack_b);
 	if (args.flags & BENCH)
 		bench(&args);
