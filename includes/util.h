@@ -6,7 +6,7 @@
 /*   By: gabrielo <gabrielo@42spstudent.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 15:28:05 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/09 14:21:43 by gabrielo         ###   ########.fr       */
+/*   Updated: 2026/06/16 18:18:37 by gabrielo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,12 +66,7 @@ void	chunk_sort(t_stack *a, t_stack *b);
 void	bench(struct s_args *args);
 int		get_total_operations(void);
 int		ft_printf_fd(int fd, const char *fmt, ...);
-void	sort_three(t_stack *a);
 int		is_sorted(t_stack *a);
-void	quick_sort(t_stack *a, t_stack *b);
-void	sort_three_top(t_stack *a, t_stack *b, int n);
 int		get_median(t_stack *a, int top_n);
-void	quick_sortA(t_stack *a, t_stack *b, int n);
-void	quick_sortB(t_stack *a, t_stack *b, int n);
 
 #endif
