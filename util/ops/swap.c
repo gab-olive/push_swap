@@ -6,10 +6,10 @@
 /*   By: gabrielo <gabrielo@42spstudent.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 16:17:16 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/05 16:27:03 by gabrielo         ###   ########.fr       */
+/*   Updated: 2026/06/16 12:23:15 by gabrielo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+
 #include "util.h"
 
 void	swap(t_stack *s)

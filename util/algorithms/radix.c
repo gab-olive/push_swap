@@ -6,7 +6,7 @@
 /*   By: gabrielo <gabrielo@42spstudent.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 09:02:59 by gabrielo          #+#    #+#             */
-/*   Updated: 2026/06/09 14:32:35 by gabrielo         ###   ########.fr       */
+/*   Updated: 2026/06/16 12:22:43 by gabrielo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	radix_sort(t_stack *a, t_stack *b)
 	int	j;
 	int	max_bits;
 	int	full_size;
-	
+
 	index_stack(a);
 	max_bits = get_max_bits(a);
 	full_size = a->size;
@@ -63,7 +63,7 @@ void	radix_sort(t_stack *a, t_stack *b)
 	while (i < max_bits)
 	{
 		if (is_sorted(a))
-				break ;
+			break ;
 		j = 0;
 		while (j < full_size)
 		{

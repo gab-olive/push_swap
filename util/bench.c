@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bench.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gabrielo <gabrielo@42spstudent.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 21:26:13 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/06 21:54:06 by zleullie         ###   ########.fr       */
+/*   Updated: 2026/06/16 12:21:30 by gabrielo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static char	*get_strategy_str(struct s_args *args)
 
 	disorder = compute_disorder(args->numbers, args->size);
 	if (args->flags & SIMPLE)
-			return ("Simple / O(n²)");
+		return ("Simple / O(n²)");
 	else if (args->flags & MEDIUM)
 		return ("Medium / O(n√n)");
 	else if (args->flags & COMPLEX)
@@ -33,8 +33,6 @@ static char	*get_strategy_str(struct s_args *args)
 		return ("Adaptive / O(n log n)");
 }
 
-#include <stdio.h>
-
 void	bench(struct s_args *args)
 {
 	double	d;
@@ -46,9 +44,12 @@ void	bench(struct s_args *args)
 	disorder = d;
 	fractions = disorder % 100;
 	disorder = disorder / 100;
-	ft_printf_fd(STDERR_FILENO, "[bench] disorder: %d.%d%%\n", disorder, fractions);
-	ft_printf_fd(STDERR_FILENO, "[bench] strategy: %s\n", get_strategy_str(args));
-	ft_printf_fd(STDERR_FILENO, "[bench] total_ops: %d\n", get_total_operations());
+	ft_printf_fd(STDERR_FILENO, "[bench] disorder: %d.%d%%\n", disorder,
+		fractions);
+	ft_printf_fd(STDERR_FILENO, "[bench] strategy: %s\n",
+		get_strategy_str(args));
+	ft_printf_fd(STDERR_FILENO, "[bench] total_ops: %d\n",
+		get_total_operations());
 	ft_printf_fd(STDERR_FILENO, "[bench]: ");
 	ft_printf_fd(STDERR_FILENO, "sa: %d ", get_operation_count(SA));
 	ft_printf_fd(STDERR_FILENO, "sb: %d ", get_operation_count(SB));

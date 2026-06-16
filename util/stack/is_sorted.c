@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   is_sorted.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            #+#  +:+       +#+        */
+/*   By: gabrielo <gabrielo@42spstudent.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-06-08 22:34:46 by gabriel           #+#    #+#             */
-/*   Updated: 2026-06-08 22:34:46 by gabriel          ###   ########.fr       */
+/*   Created: 2026/06/08 22:34:46 by gabriel           #+#    #+#             */
+/*   Updated: 2026/06/16 12:23:05 by gabrielo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	is_sorted(t_stack *a)
 {
-	t_node *tmp;
+	t_node	*tmp;
 
 	if (!a || !a->head || a->size < 2)
-        return (1);
+		return (1);
 	tmp = a->head;
 	while (tmp->next)
 	{

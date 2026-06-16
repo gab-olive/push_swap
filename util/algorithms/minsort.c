@@ -6,7 +6,7 @@
 /*   By: gabrielo <gabrielo@42spstudent.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 16:15:11 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/05 20:11:29 by gabrielo         ###   ########.fr       */
+/*   Updated: 2026/06/16 12:24:06 by gabrielo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ void	min_sort(t_stack *a, t_stack *b)
 		pb(a, b);
 	}
 	while (b->size > 0)
-		pa(a, b); 
+		pa(a, b);
 }

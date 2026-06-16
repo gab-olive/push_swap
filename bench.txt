@@ -1,5 +1,5 @@
-[bench] disorder: 51.95%
-[bench] strategy: Adaptive / O(n log n)
-[bench] total_ops: 1084
-[bench]: sa: 0 sb: 0 ss: 0 pa: 384 pb: 384
-[bench]: ra: 316 rb: 0 rr: 0 rra: 0 rrb: 0 rrr: 0
+[bench] disorder: 51.71%
+[bench] strategy: Medium / O(n√n)
+[bench] total_ops: 4987
+[bench]: sa: 52 sb: 0 ss: 0 pa: 500 pb: 500
+[bench]: ra: 2388 rb: 582 rr: 193 rra: 0 rrb: 772 rrr: 0

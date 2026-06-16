@@ -6,7 +6,7 @@
 /*   By: gabrielo <gabrielo@42spstudent.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 16:17:33 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/09 08:46:59 by gabrielo         ###   ########.fr       */
+/*   Updated: 2026/06/16 12:23:29 by gabrielo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,10 @@ void	rb(t_stack *b)
 	rotate(b);
 	ft_printf("rb\n");
 }
+
 void	rr(t_stack *a, t_stack *b)
 {
-	int executed;
+	int	executed;
 
 	executed = 0;
 	if (a && a->size >= 2)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   args.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gabrielo <gabrielo@42spstudent.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 15:37:21 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/06 17:39:44 by zleullie         ###   ########.fr       */
+/*   Updated: 2026/06/16 12:20:47 by gabrielo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,11 @@ int	validate_flags(struct s_args *args)
 	int	flags;
 
 	flags = args->flags;
-	if (!!(flags & SIMPLE) + !!(flags & MEDIUM) + !!(flags & COMPLEX) + !!(flags & ADAPTIVE) > 1)
+	if (!!(flags & SIMPLE) + !!(flags & MEDIUM) + !!(flags & COMPLEX)
+		+ !!(flags & ADAPTIVE) > 1)
 		return (0);
-	if (!!(flags & SIMPLE) + !!(flags & MEDIUM) + !!(flags & COMPLEX) + !!(flags & ADAPTIVE) == 0)
+	if (!!(flags & SIMPLE) + !!(flags & MEDIUM) + !!(flags & COMPLEX)
+		+ !!(flags & ADAPTIVE) == 0)
 		args->flags = args->flags | ADAPTIVE;
 	return (1);
 }

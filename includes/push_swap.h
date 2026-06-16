@@ -6,7 +6,7 @@
 /*   By: gabrielo <gabrielo@42spstudent.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 14:31:28 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/09 08:59:51 by gabrielo         ###   ########.fr       */
+/*   Updated: 2026/06/16 12:20:36 by gabrielo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "libft.h"
-#include <stddef.h>
+# include <stddef.h>
 
 typedef struct s_node
 {
@@ -22,16 +22,17 @@ typedef struct s_node
 	int				index;
 	struct s_node	*next;
 	struct s_node	*prev;
-}	t_node;
+}					t_node;
 
 typedef struct s_stack
 {
-	t_node	*head;
-	t_node	*tail;
-	int		size;
-}	t_stack;
+	t_node			*head;
+	t_node			*tail;
+	int				size;
+}					t_stack;
 
-enum e_operations {
+enum				e_operations
+{
 	SA = 0,
 	SB = 1,
 	SS = 2,
@@ -47,8 +48,8 @@ enum e_operations {
 
 typedef struct s_stats
 {
-	size_t	operation_count[11];
-	size_t	total;
-}	t_stats;
+	size_t			operation_count[11];
+	size_t			total;
+}					t_stats;
 
 #endif

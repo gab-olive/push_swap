@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gabrielo <gabrielo@42spstudent.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 15:42:38 by gabrielo          #+#    #+#             */
-/*   Updated: 2026/06/06 17:46:55 by zleullie         ###   ########.fr       */
+/*   Updated: 2026/06/16 12:23:11 by gabrielo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ void	print_stack(t_stack *stack, char *name)
 		curr = curr->next;
 	}
 }
-
 
 t_node	*push_back(t_stack *stack, int value)
 {
