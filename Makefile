@@ -28,7 +28,6 @@ SRCS			= push_swap.c \
 			  util/ft_printf_fd/ptr_handler_fd.c \
 			  util/ft_printf_fd/str_handler_fd.c \
 			  util/ft_printf_fd/uint_handler_fd.c \
-			  util/ops/hardcode.c \
 			  util/ops/push.c \
 			  util/ops/reverse_rotate.c \
 			  util/ops/rotate.c \
