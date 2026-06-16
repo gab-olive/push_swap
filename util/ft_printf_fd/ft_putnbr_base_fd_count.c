@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base_fd_count.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielo <gabrielo@42spstudent.org.br>     +#+  +:+       +#+        */
+/*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/08 00:00:00 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/16 12:22:36 by gabrielo         ###   ########.fr       */
+/*   Created: 2026/06/16 17:51:34 by zleullie          #+#    #+#             */
+/*   Updated: 2026/06/16 17:51:35 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

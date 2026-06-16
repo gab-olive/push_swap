@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ptr_handler_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielo <gabrielo@42spstudent.org.br>     +#+  +:+       +#+        */
+/*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/08 00:00:00 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/16 12:22:27 by gabrielo         ###   ########.fr       */
+/*   Created: 2026/06/16 17:52:02 by zleullie          #+#    #+#             */
+/*   Updated: 2026/06/16 17:52:02 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
