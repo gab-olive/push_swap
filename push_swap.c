@@ -6,7 +6,7 @@
 /*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 14:29:51 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/18 01:01:54 by zleullie         ###   ########.fr       */
+/*   Updated: 2026/06/18 01:12:42 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,13 @@ int main(int argc, char **argv)
 	if (!initialize_args(&args, argc, argv))
 		return (error_out());
 	stack_from_list(&args, &stack_a);
-	func = pick_algorithm(&args);
-	if (!func)
-		return (error_out());
-	func(&stack_a, &stack_b);
+	if (!is_sorted(&stack_a))
+	{
+		func = pick_algorithm(&args);
+		if (!func)
+			return (error_out());
+		func(&stack_a, &stack_b);
+	}
 	if (args.flags & BENCH)
 		bench(&args);
 	stack_clear(&stack_a);

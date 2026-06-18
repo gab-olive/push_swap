@@ -6,7 +6,7 @@
 /*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 15:37:21 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/18 01:01:16 by zleullie         ###   ########.fr       */
+/*   Updated: 2026/06/18 01:29:55 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,18 +77,21 @@ int	parse_args(struct s_args *args, int argc, char **argv)
 
 	if (argc < 2)
 		return (0);
-	i = 0;
-	while (++i < argc)
-		if (ft_strncmp("--", argv[i], (size_t)(2)) == 0 \
-			&& !parse_flag(args, argv[i]))
-			return (0);
-		else
+	i = 1;
+	while (i < argc)
+	{
+		if (ft_strncmp("--", argv[i], (size_t)(2)) != 0)
 			break ;
+		if (!parse_flag(args, argv[i++]))
+				return (0);
+	}
 	if (!validate_flags(args))
 		return (0);
 	while (i < argc)
 	{
 		if (!ft_is_number(argv[i]))
+			return (0);
+		if (!is_valid_number(argv[i]))
 			return (0);
 		if (!add_number(args, ft_atoi(argv[i++])))
 			return (0);

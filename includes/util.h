@@ -6,7 +6,7 @@
 /*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 15:28:05 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/18 01:00:44 by zleullie         ###   ########.fr       */
+/*   Updated: 2026/06/18 01:11:41 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ int		get_total_operations(void);
 int		ft_printf_fd(int fd, const char *fmt, ...);
 int		is_sorted(t_stack *a);
 int		list_has(int *list, int size, int value);
+int		is_valid_number(const char *str);
 
 #endif

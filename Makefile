@@ -35,7 +35,8 @@ SRCS			= push_swap.c \
 			  util/stack/from_args.c \
 			  util/stack/is_sorted.c \
 			  util/stack/stack.c \
-			  util/list_has.c
+			  util/list_has.c \
+			  util/valid_number.c
 OBJS			= ${SRCS:.c=.o}
 
 .PHONY: 		all clean fclean re
