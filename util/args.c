@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   args.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielo <gabrielo@42spstudent.org.br>     +#+  +:+       +#+        */
+/*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 15:37:21 by zleullie          #+#    #+#             */
-/*   Updated: 2026/06/16 12:20:47 by gabrielo         ###   ########.fr       */
+/*   Updated: 2026/06/18 01:01:16 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	add_number(struct s_args *args, int n)
 	int	*new_ptr;
 	int	i;
 
+	if (list_has(args->numbers, args->size, n))
+		return (0);
 	if (args->size + 1 > args->cap)
 	{
 		args->cap = args->cap * 2;
@@ -60,11 +62,11 @@ int	validate_flags(struct s_args *args)
 	int	flags;
 
 	flags = args->flags;
-	if (!!(flags & SIMPLE) + !!(flags & MEDIUM) + !!(flags & COMPLEX)
-		+ !!(flags & ADAPTIVE) > 1)
+	if (!!(flags & SIMPLE) + !!(flags & MEDIUM) + \
+		!!(flags & COMPLEX) + !!(flags & ADAPTIVE) > 1)
 		return (0);
-	if (!!(flags & SIMPLE) + !!(flags & MEDIUM) + !!(flags & COMPLEX)
-		+ !!(flags & ADAPTIVE) == 0)
+	if (!!(flags & SIMPLE) + !!(flags & MEDIUM) + \
+		!!(flags & COMPLEX) + !!(flags & ADAPTIVE) == 0)
 		args->flags = args->flags | ADAPTIVE;
 	return (1);
 }
@@ -75,25 +77,21 @@ int	parse_args(struct s_args *args, int argc, char **argv)
 
 	if (argc < 2)
 		return (0);
-	i = 1;
-	while (i < argc)
-	{
-		if (ft_strncmp("--", argv[i], (size_t)(2)) == 0)
-		{
-			if (!parse_flag(args, argv[i]))
-				return (0);
-		}
+	i = 0;
+	while (++i < argc)
+		if (ft_strncmp("--", argv[i], (size_t)(2)) == 0 \
+			&& !parse_flag(args, argv[i]))
+			return (0);
 		else
 			break ;
-		i++;
-	}
 	if (!validate_flags(args))
 		return (0);
 	while (i < argc)
 	{
 		if (!ft_is_number(argv[i]))
 			return (0);
-		add_number(args, ft_atoi(argv[i++]));
+		if (!add_number(args, ft_atoi(argv[i++])))
+			return (0);
 	}
 	return (1);
 }
